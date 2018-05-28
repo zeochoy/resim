@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on ReSim</title>
+    <link>https://zeochoy.github.io/resim/post/</link>
+    <description>Recent content in Posts on ReSim</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://zeochoy.github.io/resim/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>ReSim</title>
+      <link>https://zeochoy.github.io/resim/post/intro/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://zeochoy.github.io/resim/post/intro/</guid>
+      <description>ReSim (chemoREsistance SIMulator) is a python package that simulates cancer chemoresistance dynamics based on a stochastic model. The model describes the interaction between chemotherapeutics and various cancer cell subpopulations (including sensitive, primary resistant, acquired resistant and quiescent cancer cells).
+ReSim provides both GUI (powered by Flask) and CUI.
+Remarks: Simulation result is greatly depended on input params, therefore ReSim is intended to use in parallel with in vitro assay. Procedures or details in identifying input params in vitro is out of scope here and will be documented in elsewhere (hope to get it publish soon).</description>
+    </item>
+    
+    <item>
+      <title>Installation</title>
+      <link>https://zeochoy.github.io/resim/post/install/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://zeochoy.github.io/resim/post/install/</guid>
+      <description>We strongly recommend everyone to install resim within a virtual environment. Setup the venv as usual and run ::
+$ pip install resim  Otherwise, install it locally.</description>
+    </item>
+    
+    <item>
+      <title>Getting Started</title>
+      <link>https://zeochoy.github.io/resim/post/getstarted/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://zeochoy.github.io/resim/post/getstarted/</guid>
+      <description>Open your command prompt, simply run ::
+$ resim-flask  ReSim is now available at http://localhost:5000/resim .
+Note GUI provides a simplified &amp;amp; handy version of resim with interactive plotly plots. Please use CUI if you need more control of input params.</description>
+    </item>
+    
+    <item>
+      <title>Advanced Usage</title>
+      <link>https://zeochoy.github.io/resim/post/usage/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://zeochoy.github.io/resim/post/usage/</guid>
+      <description>Using defaults params (calibrated from the case of sorafenib and liver cancer)::
+ &amp;gt;&amp;gt;&amp;gt; import resim &amp;gt;&amp;gt;&amp;gt; model = resim.Simulator() &amp;gt;&amp;gt;&amp;gt; res = model.simulate() &amp;gt;&amp;gt;&amp;gt; snsplt_cells = resim.plot_cells(res, subplot=True) &amp;gt;&amp;gt;&amp;gt; snsplt_drug = resim.plot_drug(res) &amp;gt;&amp;gt;&amp;gt; snsplt_fht = resim.plot_fht(res) &amp;gt;&amp;gt;&amp;gt; snsplt_cells.figure.savefig(&#39;resim_cells.png&#39;) &amp;gt;&amp;gt;&amp;gt; snsplt_drug.figure.savefig(&#39;resim_drug.png&#39;) &amp;gt;&amp;gt;&amp;gt; snsplt_fht.figure.savefig(&#39;resim_fht.png&#39;)  You may set your own params. For examples, input the growth rate of sensitive cells and resistant cells determined in vitro::
+ &amp;gt;&amp;gt;&amp;gt; import resim &amp;gt;&amp;gt;&amp;gt; model = resim.</description>
+    </item>
+    
+    <item>
+      <title>Documentation</title>
+      <link>https://zeochoy.github.io/resim/post/docs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://zeochoy.github.io/resim/post/docs/</guid>
+      <description>Available at https://resim.readthedocs.io/.</description>
+    </item>
+    
+    <item>
+      <title>TODO</title>
+      <link>https://zeochoy.github.io/resim/post/todo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://zeochoy.github.io/resim/post/todo/</guid>
+      <description> Add class methods for conventional first-line/second-line chemos in HCC, PC. Add tool for converting tumor&amp;rsquo;s diameter/volume to number of cells. Add tool for converting doubling time to growth rate. Add tool for converting half-life to k. Add command line module. Integrate parallel programming sde solver module nsim &amp;lt;https://github.com/mattja/nsim&amp;gt; to speed up the computation.  </description>
+    </item>
+    
+  </channel>
+</rss>
